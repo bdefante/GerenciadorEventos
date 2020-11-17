@@ -5,14 +5,14 @@
 	<persistence-unit name="punit" transaction-type="JTA">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
  
-    	<jta-data-source>java:/gereventosDS</jta-data-source>
+    	<jta-data-source>java:/gerenciador_eventosDS</jta-data-source> <!-- Nome que deu ao seu JNDI/Datasource -->
     	
 	<properties>
       		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       		<property name="hibernate.hbm2ddl.auto"  value="update"/>
       		<property name="database" value="MYSQL" />
-      		<property name="hibernate.show_sql" value="true"/>
-      	  	<property name="hibernate.format_sql" value="true"/>
+      		<property name="hibernate.show_sql" value="false"/>
+      	  	<property name="hibernate.format_sql" value="false"/>
     	</properties>
     </persistence-unit>    
 </persistence>
